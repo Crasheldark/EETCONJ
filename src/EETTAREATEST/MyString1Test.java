@@ -48,9 +48,35 @@ class MyString1Test {
 	assertTrue (MyString1.contarFrecuenciaPalabras("hola mundo mundo").equals(botella));
 	
 	assertFalse (MyString1.contarFrecuenciaPalabras("hola mundo").equals(botella));
-	
-	
 		
 	}
+	
+	@Test
+
+	void testcontarFrecuenciaLetras() {
+	Map<Character, Integer> refresco = new HashMap<>();
+	refresco.put('o', 3);
+	refresco.put('h', 1);
+	refresco.put('l', 1);
+	refresco.put('a', 1);
+	refresco.put('s', 2);
+	    
+	assertEquals  (refresco, MyString1.contarFrecuenciaLetras("hola osos"));
+	    
+	assertTrue (MyString1.contarFrecuenciaLetras("hola osos").equals(refresco));
+	    
+	assertFalse (MyString1.contarFrecuenciaLetras("hola ososo").equals(refresco));
+	    
+	}
+	
+	@Test
+	void testesPalíndroma() {
+	assertTrue (MyString1.esPalindroma("Anna"));
+	
+	assertFalse (MyString1.esPalindroma("donete"));
+		
+		
+	}
+
 		
 }
